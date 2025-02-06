@@ -105,6 +105,9 @@ class PulsaController extends Controller
                 return redirect()->back()->with('success', 'Transaksi berhasil!');
             }
 
+            if (isset($data['status']) && $data['status'] === 'gagal') {
+                return redirect()->back()->with('success', 'Saldo tidak mencukupi');
+            }
             // Tangani error jika transaksi gagal
             return redirect()->back()->with('error', 'Transaksi gagal. Silakan coba lagi.');
         } catch (\Exception $e) {

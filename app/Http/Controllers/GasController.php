@@ -106,7 +106,7 @@ class GasController extends Controller
             }
 
             // Tangani error jika transaksi gagal
-            return redirect()->back()->with('error', 'Transaksi gagal. Silakan coba lagi.');
+            return redirect()->back()->with('error', 'Transaksi gagal. Saldo tidak mencukupi.');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Terjadi kesalahan saat menghubungi API.');
         }

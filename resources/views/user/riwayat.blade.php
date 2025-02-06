@@ -56,6 +56,7 @@
             <ul>
               <li>
                 <span><i class="bi bi-person"></i>{{ $userData['user']['name'] }}</span>
+                <span><i class="bi bi-currency-dollar"></i>Rp {{ number_format($userData['user']['balance'], 0, ',', '.') }}</span>
               </li>
               <li>
                 <button type="submit">Logout</button>
